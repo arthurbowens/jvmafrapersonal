@@ -3,13 +3,14 @@
 @theme {
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --color-ink: #0b0a09;
-  --color-ink-soft: #161412;
-  --color-gold: #c9a35c;
-  --color-gold-light: #e8d5a3;
-  --color-blush: #d9b3b0;
-  --color-cream: #f6f0e6;
-  --color-mute: #b8b0a4;
+  --color-black: #000000;
+  --color-surface: #080808;
+  --color-surface-light: #121212;
+  --color-white: #ffffff;
+  --color-blue: #0077ff;
+  --color-blue-light: #33aaff;
+  --color-orange: #ff6600;
+  --color-orange-light: #ff8833;
   --color-whatsapp: #25d366;
 }
 
@@ -20,14 +21,37 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-ink);
-  color: var(--color-cream);
+  background: var(--color-black);
+  color: var(--color-white);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-gold) 40%, transparent);
-  color: var(--color-cream);
+  background: color-mix(in srgb, var(--color-orange) 45%, transparent);
+  color: var(--color-white);
+}
+
+.btn-orange {
+  background: var(--color-orange);
+  box-shadow: 0 0 32px color-mix(in srgb, var(--color-orange) 50%, transparent);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-orange:hover {
+  background: var(--color-orange-light);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--color-orange) 65%, transparent);
+}
+
+.btn-blue {
+  border: 1px solid color-mix(in srgb, var(--color-blue) 55%, transparent);
+  background: color-mix(in srgb, var(--color-blue) 18%, transparent);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--color-blue) 25%, transparent);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-blue:hover {
+  background: color-mix(in srgb, var(--color-blue) 30%, transparent);
+  box-shadow: 0 0 32px color-mix(in srgb, var(--color-blue) 40%, transparent);
 }
