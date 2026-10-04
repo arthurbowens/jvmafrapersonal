@@ -31,17 +31,17 @@
       <h1 class="font-display text-[2.8rem] leading-[0.95] text-white sm:text-6xl lg:text-7xl">
         Entre na
         <span class="bg-linear-to-r from-orange to-blue-light bg-clip-text text-transparent italic">Lista VIP</span>
-        do João Victor
+        da Mafra Team
       </h1>
 
-      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/65">
-        Condição especial antes de abrir para todo mundo. Prioridade no atendimento e acesso exclusivo ao acompanhamento
-        feminino que já transformou {{ brand.activeClients }} mulheres.
+      <p class="section-lead mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
+        Condição especial antes de abrir para todo mundo. Prioridade no atendimento e acesso exclusivo à
+        {{ brand.subtitle }} que já transformou {{ brand.activeClients }} mulheres.
       </p>
 
       <div class="mx-auto mt-10 max-w-lg rounded-2xl border border-blue/40 bg-blue/10 p-6 shadow-[0_0_30px_rgba(0,119,255,0.2)]">
         <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-light">Oferta promocional</p>
-        <p class="mt-2 font-display text-3xl text-white">Garanta sua vaga com condição VIP</p>
+        <p class="mt-2 font-display text-3xl text-white">{{ brand.experience }}</p>
         <p class="mt-2 text-sm text-white/55">Ideal para campanhas como Black Friday, lançamentos e grupos fechados.</p>
       </div>
 
@@ -56,7 +56,7 @@
           Quero entrar na Lista VIP
         </a>
         <a
-          [href]="whatsappUrl('Oi João! Vi a campanha VIP e quero garantir minha vaga.')"
+          [href]="whatsappUrl('Oi, Mafra Team! Vi a campanha VIP e quero garantir minha vaga.')"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-blue inline-flex w-full items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-blue-light sm:w-auto"
@@ -129,14 +129,14 @@
       <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-surface">
         <img
           src="/foto1.jpg"
-          alt="João Victor Mafra, personal trainer"
+          alt="Mafra Team, consultoria esportiva"
           class="aspect-[4/5] w-full object-cover object-[center_18%]"
           width="700"
           height="875"
         />
         <div class="border-t border-white/10 p-6">
-          <p class="font-display text-2xl text-white">{{ brand.fullName }}</p>
-          <p class="mt-1 text-sm text-white/55">{{ brand.tagline }}</p>
+          <p class="font-display text-2xl text-white">{{ brand.name }}</p>
+          <p class="mt-1 text-sm uppercase tracking-[0.14em] text-white/55">{{ brand.subtitle }}</p>
           <a
             [href]="whatsappUrl()"
             target="_blank"
@@ -157,7 +157,7 @@
     >
       <p class="text-[11px] font-bold uppercase tracking-[0.24em] text-orange">Última chamada</p>
       <h2 class="mt-4 font-display text-4xl text-white sm:text-5xl">Não espere abrir para todo mundo</h2>
-      <p class="mx-auto mt-4 max-w-xl text-white/60">
+      <p class="section-lead mx-auto mt-4 max-w-xl text-sm text-white/60">
         A Lista VIP fecha quando as vagas acabam. Chama no WhatsApp agora e garante condição especial antes da campanha
         ir ao ar.
       </p>

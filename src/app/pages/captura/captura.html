@@ -27,7 +27,7 @@
         <p
           class="mb-5 inline-flex items-center gap-2 rounded-full border border-blue/50 bg-blue/20 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-light shadow-[0_0_20px_rgba(0,119,255,0.25)]"
         >
-          {{ brand.tagline }}
+          {{ brand.taglineUpper }}
         </p>
 
         <h1 class="font-display text-[2.6rem] leading-[0.95] text-white sm:text-6xl lg:text-[4.4rem]">
@@ -38,7 +38,7 @@
           <span class="italic text-white">poderosa</span>
         </h1>
 
-        <p class="mt-6 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg">
+        <p class="section-lead mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">
           Chega de treino que não muda o corpo. Aqui você emagrece, marca curva e se vê poderosa no espelho. Método
           feito para mulher. Acompanhamento que cobra resultado.
         </p>
@@ -74,13 +74,13 @@
             Quero esse corpo
           </a>
           <a
-            [href]="whatsappUrl('Oi João! Quero saber como funciona e começar a transformar meu corpo.')"
+            [href]="whatsappUrl('Oi, Mafra Team! Quero saber como funciona e começar a transformar meu corpo.')"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-blue inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-blue-light"
           >
             <app-whatsapp-icon />
-            Falar com o João agora
+            Falar com a Mafra Team
           </a>
         </div>
       </div>
@@ -93,7 +93,7 @@
           >
             <img
               src="/foto1.jpg"
-              alt="João Victor Mafra, personal trainer especialista em treinamento feminino"
+              alt="Mafra Team, consultoria especializada em treinamento feminino"
               class="aspect-[4/5] w-full object-cover object-[center_18%] lg:aspect-[3/4]"
               width="900"
               height="1200"
@@ -102,8 +102,8 @@
               class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-linear-to-t from-black via-black/55 to-transparent p-5"
             >
               <div>
-                <p class="font-display text-2xl text-white">{{ brand.fullName }}</p>
-                <p class="text-xs uppercase tracking-[0.18em] text-orange">Quem cobra o seu resultado</p>
+                <p class="font-display text-2xl text-white">{{ brand.name }}</p>
+                <p class="text-xs uppercase tracking-[0.18em] text-orange">{{ brand.subtitle }}</p>
               </div>
               <span
                 class="hidden rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[11px] text-white backdrop-blur sm:inline"
@@ -155,7 +155,7 @@
     <div class="max-w-2xl">
       <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-light">O método</p>
       <h2 class="mt-3 font-display text-4xl text-white sm:text-5xl">O caminho entre o corpo de hoje e o corpo que você quer</h2>
-      <p class="mt-4 text-white/60">
+      <p class="section-lead mt-4 text-sm text-white/60">
         Quatro etapas. Sem enrolação. Você para de treinar no automático e entra num processo que cobra transformação.
       </p>
     </div>
@@ -200,7 +200,7 @@
 
     <div class="mt-10">
       <a
-        [href]="whatsappUrl('Oi João! Quero entrar no método e começar minha transformação.')"
+        [href]="whatsappUrl('Oi, Mafra Team! Quero entrar no método e começar minha transformação.')"
         target="_blank"
         rel="noopener noreferrer"
         class="btn-orange inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
@@ -216,7 +216,7 @@
       <div class="max-w-2xl">
         <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-orange">Prova real</p>
         <h2 class="mt-3 font-display text-4xl text-white sm:text-5xl">Resultados que você vai querer no seu corpo</h2>
-        <p class="mt-4 text-white/60">
+        <p class="section-lead mt-4 text-sm text-white/60">
           Alunas reais. Transformação visível. Os antes e depois entram aqui. Enquanto isso, o próximo resultado pode ser o seu.
         </p>
       </div>
@@ -255,7 +255,7 @@
 
       <div class="mt-10">
         <a
-          [href]="whatsappUrl('Oi João! Quero o meu antes e depois. Pode me explicar como começar?')"
+          [href]="whatsappUrl('Oi, Mafra Team! Quero o meu antes e depois. Pode me explicar como começar?')"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-orange inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
@@ -270,11 +270,13 @@
   <section id="sobre" class="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-28">
     <div class="grid items-center gap-12 lg:grid-cols-2">
       <div>
-        <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-light">Quem cobra o resultado</p>
-        <h2 class="mt-3 font-display text-4xl text-white sm:text-5xl">{{ brand.fullName }}</h2>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-light">{{ brand.experience }}</p>
+        <h2 class="mt-3 font-display text-4xl text-white sm:text-5xl">{{ brand.name }}</h2>
+        <p class="section-lead mt-4 text-sm text-white/55">{{ brand.subtitle }}</p>
         <p class="mt-5 text-base leading-relaxed text-white/60">
-          Personal trainer especialista em treinamento feminino. Eu não te entrego uma planilha e sumo. Eu monto o treino,
-          acompanho a execução e puxo a evolução até o corpo que você pediu aparecer.
+          Consultoria esportiva especializada em treinamento feminino. Não entregamos planilha e sumimos. Montamos o
+          treino, acompanhamos a execução e puxamos a evolução até o corpo que você pediu aparecer. Liderada por
+          {{ brand.founder }}.
         </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3 text-sm text-white">
@@ -293,25 +295,25 @@
             <svg class="mt-0.5 h-5 w-5 shrink-0 text-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7" />
             </svg>
-            WhatsApp direto comigo. Sem intermediário, sem sumiço
+            WhatsApp direto com a equipe. Sem intermediário, sem sumiço
           </li>
         </ul>
         <a
-          [href]="whatsappUrl('Oi João! Vi o site e quero começar o acompanhamento com você.')"
+          [href]="whatsappUrl('Oi, Mafra Team! Vi o site e quero começar o acompanhamento.')"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-orange mt-8 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
         >
           <app-whatsapp-icon />
-          Quero treinar com o João
+          Quero entrar na Mafra Team
         </a>
       </div>
 
       <div class="rounded-3xl border border-white/10 bg-surface p-8">
-        <p class="font-display text-3xl leading-snug text-white italic">
-          “Seu objetivo vira o meu. Eu traço o caminho. Você mostra no espelho o corpo que sempre quis.”
+        <p class="font-display text-3xl leading-snug text-white italic normal-case">
+          “Seu objetivo vira o nosso. Traçamos o caminho. Você mostra no espelho o corpo que sempre quis.”
         </p>
-        <p class="mt-6 text-sm uppercase tracking-[0.18em] text-orange">{{ brand.fullName }}</p>
+        <p class="mt-6 text-sm uppercase tracking-[0.18em] text-orange">{{ brand.name }}</p>
       </div>
     </div>
   </section>
@@ -338,7 +340,7 @@
       </div>
 
       <a
-        [href]="whatsappUrl('Oi João! Ainda tenho uma dúvida e quero começar do jeito certo.')"
+        [href]="whatsappUrl('Oi, Mafra Team! Ainda tenho uma dúvida e quero começar do jeito certo.')"
         target="_blank"
         rel="noopener noreferrer"
         class="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-blue-light hover:text-white"
@@ -355,7 +357,7 @@
     >
       <div class="max-w-xl">
         <h2 class="font-display text-4xl text-white sm:text-5xl">O corpo que você quer não vai aparecer sozinho.</h2>
-        <p class="mt-4 text-white/60">
+        <p class="section-lead mt-4 text-sm text-white/60">
           Manda mensagem agora. Em minutos você sai do treino que não funciona e entra no processo que muda o espelho.
         </p>
       </div>

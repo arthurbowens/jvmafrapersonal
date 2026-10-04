@@ -10,7 +10,7 @@ import { WhatsappIcon } from './whatsapp-icon';
       <div
         class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between lg:px-8"
       >
-        <p>{{ brand.fullName }}. {{ brand.role }}.</p>
+        <p>{{ brand.name }}. {{ brand.subtitle }}.</p>
         <a
           [href]="whatsappHref()"
           target="_blank"

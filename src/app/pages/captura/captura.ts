@@ -16,7 +16,7 @@ export class CapturaPage {
 
   protected readonly brand = brand;
   protected readonly defaultMessage =
-    'Oi João! Quero o acompanhamento e ficar mais magra, definida e poderosa.';
+    'Oi, Mafra Team! Quero o acompanhamento e ficar mais magra, definida e poderosa.';
 
   protected readonly nav = [
     { label: 'Início', href: '#inicio' },
@@ -47,7 +47,7 @@ export class CapturaPage {
   protected readonly method = [
     {
       step: '01',
-      title: 'Você fala. Eu leio o seu corpo.',
+      title: 'Você fala. Nós lemos o seu corpo.',
       text: 'Rotina, histórico e o físico que você quer. Sem achismo. Sem treino de internet.',
       icon: 'clipboard',
     },
@@ -59,8 +59,8 @@ export class CapturaPage {
     },
     {
       step: '03',
-      title: 'Eu no seu WhatsApp toda semana',
-      text: 'Correção, ajuste de carga e resposta rápida. Você não treina sozinha.',
+      title: 'WhatsApp aberto + feedback mensal',
+      text: 'Todo mês, feedback com avaliação física da consultoria para comparativos. Entre os feedbacks, você tira dúvidas e envia vídeos de execução quando quiser.',
       icon: 'chat',
     },
     {
@@ -87,12 +87,16 @@ export class CapturaPage {
       a: 'Dá. O treino entra na semana que você tem. Curto, certeiro e impossível de enrolar.',
     },
     {
-      q: 'O WhatsApp é com você ou com uma equipe?',
-      a: 'Comigo. Dúvida, vídeo da execução, ajuste de carga: você fala direto com o João.',
+      q: 'Como funciona o feedback?',
+      a: 'Todo mês realizamos feedback com avaliação física proposta na consultoria, para comparativos de evolução. Entre os feedbacks, o WhatsApp fica aberto para dúvidas, vídeos de execução e ajustes quando você precisar.',
+    },
+    {
+      q: 'O WhatsApp é com a equipe ou com robô?',
+      a: 'É com a Mafra Team. Acompanhamento humano, direto e focado no seu resultado.',
     },
     {
       q: 'Tenho dor, pós-parto ou restrição. Posso entrar?',
-      a: 'Pode. Eu adapto o protocolo para você treinar, evoluir e se machucar menos.',
+      a: 'Pode. Adaptamos o protocolo para você treinar, evoluir e se machucar menos.',
     },
   ];
 

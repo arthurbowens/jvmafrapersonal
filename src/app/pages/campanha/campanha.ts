@@ -16,7 +16,7 @@ export class CampanhaPage {
 
   protected readonly brand = brand;
   protected readonly defaultMessage =
-    'Oi João! Quero entrar na Lista VIP e garantir minha vaga com condição especial.';
+    'Oi, Mafra Team! Quero entrar na Lista VIP e garantir minha vaga com condição especial.';
 
   protected readonly nav = [
     { label: 'A oferta', href: '#oferta' },
@@ -37,7 +37,7 @@ export class CampanhaPage {
     },
     {
       title: 'Vagas limitadas',
-      text: 'Abro poucas vagas por mês para manter a qualidade. Lista VIP garante sua chance.',
+      text: 'Poucas vagas por mês para manter a qualidade. Lista VIP garante sua chance.',
       accent: 'orange',
     },
     {
@@ -50,8 +50,8 @@ export class CampanhaPage {
   protected readonly steps = [
     'Entre na Lista VIP pelo WhatsApp',
     'Receba a condição especial antes de todo mundo',
-    'Garanta sua vaga no acompanhamento',
-    'Comece o protocolo com o João',
+    'Garanta sua vaga na Consultoria Mafra Team',
+    'Comece o protocolo com a Mafra Team',
   ];
 
   protected whatsappUrl(message = this.defaultMessage): string {

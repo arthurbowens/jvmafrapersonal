@@ -33,6 +33,18 @@ body {
   color: var(--color-white);
 }
 
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.section-lead {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .btn-orange {
   background: var(--color-orange);
   box-shadow: 0 0 32px color-mix(in srgb, var(--color-orange) 50%, transparent);
