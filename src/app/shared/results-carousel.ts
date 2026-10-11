@@ -1,4 +1,14 @@
-import { Component, ElementRef, input, signal, viewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {
+  afterNextRender,
+  Component,
+  ElementRef,
+  inject,
+  input,
+  PLATFORM_ID,
+  signal,
+  viewChild,
+} from '@angular/core';
 
 export type ResultSlide = {
   src: string;
@@ -43,7 +53,9 @@ export type ResultSlide = {
                 class="aspect-[4/5] w-full bg-black object-contain"
                 width="960"
                 height="1200"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
+                [attr.fetchpriority]="i === 0 ? 'high' : 'auto'"
               />
               <figcaption class="flex items-center justify-between border-t border-white/10 px-4 py-3">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/55">Transformação real</p>
@@ -86,10 +98,19 @@ export type ResultSlide = {
   `,
 })
 export class ResultsCarousel {
+  private readonly platformId = inject(PLATFORM_ID);
+
   readonly slides = input.required<ResultSlide[]>();
 
   private readonly track = viewChild<ElementRef<HTMLDivElement>>('track');
   protected readonly activeIndex = signal(0);
+
+  constructor() {
+    afterNextRender(() => {
+      if (!isPlatformBrowser(this.platformId)) return;
+      this.preloadSlides();
+    });
+  }
 
   protected scrollTo(index: number): void {
     const track = this.track()?.nativeElement;
@@ -100,6 +121,7 @@ export class ResultsCarousel {
 
     target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     this.activeIndex.set(index);
+    this.preloadAround(index);
   }
 
   protected scrollBy(delta: number): void {
@@ -125,6 +147,28 @@ export class ResultsCarousel {
       }
     }
 
-    this.activeIndex.set(closest);
+    if (closest !== this.activeIndex()) {
+      this.activeIndex.set(closest);
+      this.preloadAround(closest);
+    }
+  }
+
+  private preloadSlides(): void {
+    for (const slide of this.slides()) {
+      this.preloadImage(slide.src);
+    }
+  }
+
+  private preloadAround(index: number): void {
+    for (let offset = -2; offset <= 2; offset++) {
+      const slide = this.slides()[index + offset];
+      if (slide) this.preloadImage(slide.src);
+    }
+  }
+
+  private preloadImage(src: string): void {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
   }
 }
