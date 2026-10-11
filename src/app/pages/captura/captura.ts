@@ -4,11 +4,12 @@ import { WhatsappService } from '../../core/whatsapp.service';
 import { SiteFooter } from '../../shared/site-footer';
 import { SiteHeader } from '../../shared/site-header';
 import { WhatsappFloat } from '../../shared/whatsapp-float';
+import { ResultsCarousel } from '../../shared/results-carousel';
 import { WhatsappIcon } from '../../shared/whatsapp-icon';
 
 @Component({
   selector: 'app-captura-page',
-  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappIcon],
+  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappIcon, ResultsCarousel],
   templateUrl: './captura.html',
 })
 export class CapturaPage {
@@ -71,11 +72,13 @@ export class CapturaPage {
     },
   ];
 
-  protected readonly resultSlots = [
-    { label: 'Aluna 01', note: 'Antes e depois' },
-    { label: 'Aluna 02', note: 'Antes e depois' },
-    { label: 'Aluna 03', note: 'Antes e depois' },
-  ];
+  protected readonly results = Array.from({ length: 11 }, (_, index) => {
+    const number = index + 1;
+    return {
+      src: `/resultado${number}.jpeg`,
+      alt: `Resultado de transformação da Mafra Team, antes e depois`,
+    };
+  });
 
   protected readonly faqs = [
     {

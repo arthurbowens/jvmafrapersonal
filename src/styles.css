@@ -45,6 +45,17 @@ h3 {
   letter-spacing: 0.08em;
 }
 
+.results-track {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+  scrollbar-width: none;
+}
+
+.results-track::-webkit-scrollbar {
+  display: none;
+}
+
 .btn-orange {
   background: var(--color-orange);
   box-shadow: 0 0 32px color-mix(in srgb, var(--color-orange) 50%, transparent);
