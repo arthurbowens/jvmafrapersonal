@@ -1,12 +1,12 @@
 import { Component, HostListener, input, signal } from '@angular/core';
 import { Logo } from './logo';
-import { WhatsappIcon } from './whatsapp-icon';
+import { WhatsappButton } from './whatsapp-button';
 
 export type NavItem = { label: string; href: string };
 
 @Component({
   selector: 'app-site-header',
-  imports: [Logo, WhatsappIcon],
+  imports: [Logo, WhatsappButton],
   template: `
     <header class="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/85 backdrop-blur-xl">
       <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 lg:h-[4.5rem] lg:px-8">
@@ -16,15 +16,7 @@ export type NavItem = { label: string; href: string };
           @for (item of nav(); track item.href) {
             <a [href]="item.href" class="text-sm text-white/60 transition hover:text-white">{{ item.label }}</a>
           }
-          <a
-            [href]="ctaHref()"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-orange inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-black"
-          >
-            <app-whatsapp-icon />
-            {{ ctaLabel() }}
-          </a>
+          <app-whatsapp-button [href]="ctaHref()" variant="compact">{{ ctaLabel() }}</app-whatsapp-button>
         </nav>
 
         <button
@@ -70,16 +62,11 @@ export type NavItem = { label: string; href: string };
           {{ item.label }}
         </a>
       }
-      <a
-        [href]="ctaHref()"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-orange mt-4 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold text-black"
-        (click)="closeMenu()"
-      >
-        <app-whatsapp-icon />
-        {{ ctaLabel() }}
-      </a>
+      <div class="mt-4 w-full" (click)="closeMenu()">
+        <app-whatsapp-button [href]="ctaHref()" variant="solid" [fullWidth]="true">
+          {{ ctaLabel() }}
+        </app-whatsapp-button>
+      </div>
     </nav>
   `,
 })

@@ -77,3 +77,28 @@ h3 {
   background: color-mix(in srgb, var(--color-blue) 30%, transparent);
   box-shadow: 0 0 32px color-mix(in srgb, var(--color-blue) 40%, transparent);
 }
+
+.btn-whatsapp {
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+  box-shadow: 0 0 28px rgba(37, 211, 102, 0.45);
+  transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 0 36px rgba(37, 211, 102, 0.55);
+}
+
+.btn-whatsapp-outline {
+  border: 1px solid color-mix(in srgb, var(--color-whatsapp) 70%, transparent);
+  background: color-mix(in srgb, var(--color-whatsapp) 14%, transparent);
+  color: var(--color-white);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-whatsapp-outline:hover {
+  background: color-mix(in srgb, var(--color-whatsapp) 26%, transparent);
+  box-shadow: 0 0 28px rgba(37, 211, 102, 0.35);
+}

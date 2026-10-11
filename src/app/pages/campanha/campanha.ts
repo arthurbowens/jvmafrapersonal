@@ -4,11 +4,11 @@ import { WhatsappService } from '../../core/whatsapp.service';
 import { SiteFooter } from '../../shared/site-footer';
 import { SiteHeader } from '../../shared/site-header';
 import { WhatsappFloat } from '../../shared/whatsapp-float';
-import { WhatsappIcon } from '../../shared/whatsapp-icon';
+import { WhatsappButton } from '../../shared/whatsapp-button';
 
 @Component({
   selector: 'app-campanha-page',
-  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappIcon],
+  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappButton],
   templateUrl: './campanha.html',
 })
 export class CampanhaPage {

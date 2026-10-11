@@ -64,24 +64,13 @@
         </div>
 
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a
-            [href]="whatsappUrl()"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-orange inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
-          >
-            <app-whatsapp-icon />
-            Quero esse corpo
-          </a>
-          <a
+          <app-whatsapp-button [href]="whatsappUrl()">Quero esse corpo</app-whatsapp-button>
+          <app-whatsapp-button
             [href]="whatsappUrl('Oi, Mafra Team! Quero saber como funciona e começar a transformar meu corpo.')"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-blue inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-blue-light"
+            variant="outline"
           >
-            <app-whatsapp-icon />
             Falar com a Mafra Team
-          </a>
+          </app-whatsapp-button>
         </div>
       </div>
 
@@ -199,15 +188,9 @@
     </div>
 
     <div class="mt-10">
-      <a
-        [href]="whatsappUrl('Oi, Mafra Team! Quero entrar no método e começar minha transformação.')"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-orange inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
-      >
-        <app-whatsapp-icon />
+      <app-whatsapp-button [href]="whatsappUrl('Oi, Mafra Team! Quero entrar no método e começar minha transformação.')">
         Quero entrar no método
-      </a>
+      </app-whatsapp-button>
     </div>
   </section>
 
@@ -226,15 +209,11 @@
       </div>
 
       <div class="mt-10">
-        <a
+        <app-whatsapp-button
           [href]="whatsappUrl('Oi, Mafra Team! Quero o meu antes e depois. Pode me explicar como começar?')"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-orange inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
         >
-          <app-whatsapp-icon />
           Quero o meu antes e depois
-        </a>
+        </app-whatsapp-button>
       </div>
     </div>
   </section>
@@ -270,15 +249,12 @@
             WhatsApp direto com a equipe. Sem intermediário, sem sumiço
           </li>
         </ul>
-        <a
+        <app-whatsapp-button
+          class="mt-8"
           [href]="whatsappUrl('Oi, Mafra Team! Vi o site e quero começar o acompanhamento.')"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-orange mt-8 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-black"
         >
-          <app-whatsapp-icon />
           Quero entrar na Mafra Team
-        </a>
+        </app-whatsapp-button>
       </div>
 
       <div class="rounded-3xl border border-white/10 bg-surface p-8">
@@ -311,15 +287,12 @@
         }
       </div>
 
-      <a
+      <app-whatsapp-button
+        class="mt-10"
         [href]="whatsappUrl('Oi, Mafra Team! Ainda tenho uma dúvida e quero começar do jeito certo.')"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-blue-light hover:text-white"
       >
-        <app-whatsapp-icon />
         Tirar minha dúvida no WhatsApp
-      </a>
+      </app-whatsapp-button>
     </div>
   </section>
 
@@ -333,15 +306,7 @@
           Manda mensagem agora. Em minutos você sai do treino que não funciona e entra no processo que muda o espelho.
         </p>
       </div>
-      <a
-        [href]="whatsappUrl()"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-orange inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-black"
-      >
-        <app-whatsapp-icon />
-        Começar minha transformação
-      </a>
+      <app-whatsapp-button [href]="whatsappUrl()" variant="large">Começar minha transformação</app-whatsapp-button>
     </div>
   </section>
 </main>

@@ -5,11 +5,11 @@ import { SiteFooter } from '../../shared/site-footer';
 import { SiteHeader } from '../../shared/site-header';
 import { WhatsappFloat } from '../../shared/whatsapp-float';
 import { ResultsCarousel } from '../../shared/results-carousel';
-import { WhatsappIcon } from '../../shared/whatsapp-icon';
+import { WhatsappButton } from '../../shared/whatsapp-button';
 
 @Component({
   selector: 'app-captura-page',
-  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappIcon, ResultsCarousel],
+  imports: [SiteHeader, SiteFooter, WhatsappFloat, WhatsappButton, ResultsCarousel],
   templateUrl: './captura.html',
 })
 export class CapturaPage {
